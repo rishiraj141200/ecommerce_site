@@ -18,7 +18,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/shop/', include('shop.urls')),
+    path('shop/', include('shop.urls')),
     path('users/', include('users.urls')),
     path('', views.index),
     path('login/',CustomLoginView.as_view(redirect_authenticated_user=True, template_name='users/login.html',authentication_form=LoginForm), name='login'),

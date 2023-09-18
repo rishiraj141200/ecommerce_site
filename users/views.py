@@ -10,7 +10,7 @@ from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm
 
 
 def home(request):
-    return render(request, 'users/home.html')
+    return render(request, 'users/login.html')
     #return  redirect("shop/")
     #return redirect('shop/')
 
@@ -23,7 +23,7 @@ class RegisterView(View):
     def dispatch(self, request, *args, **kwargs):
         # will redirect to the home page if a user tries to access the register page while logged in
         if request.user.is_authenticated:
-            return redirect(to='/')
+            return redirect('users/shop')
 
         # else process dispatch as it otherwise normally would
         return super(RegisterView, self).dispatch(request, *args, **kwargs)
@@ -62,6 +62,11 @@ class CustomLoginView(LoginView):
 
         # else browser session will be as long as the session cookie time "SESSION_COOKIE_AGE" defined in settings.py
         return super(CustomLoginView, self).form_valid(form)
+
+    def get_success_url(self):
+        # Return the URL you want to redirect to after a successful login
+        return '/shop/'  # Replace 'users:shop' with the actual URL name
+
 
 
 class ResetPasswordView(SuccessMessageMixin, PasswordResetView):
