@@ -71,6 +71,7 @@ def verify_checksum_by_str(param_str, merchant_key, checksum):
 
     # Get salt
     paytm_hash = __decode__(checksum, IV, merchant_key)
+    print(paytm_hash)
     salt = paytm_hash[-4:]
     calculated_checksum = generate_checksum_by_str(param_str, merchant_key, salt=salt)
     return calculated_checksum == checksum
@@ -130,7 +131,6 @@ if __name__ == "__main__":
         "INDUSTRY_TYPE_ID": "Retail",
         "WEBSITE": "xxxxxxxxxxx"
     }
-
     print(verify_checksum(
         params, 'xxxxxxxxxxxxxxxx',
         "CD5ndX8VVjlzjWbbYoAtKQIlvtXPypQYOg0Fi2AUYKXZA5XSHiRF0FDj7vQu66S8MHx9NaDZ/uYm3WBOWHf+sDQAmTyxqUipA7i1nILlxrk="))

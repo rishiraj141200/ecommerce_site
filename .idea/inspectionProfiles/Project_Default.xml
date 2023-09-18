@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="test_dict.upadte_dic" />
+          <option value="speech_recognition" />
+          <option value="SpeechRecognition" />
+          <option value="testapp.views" />
+          <option value="DataFlair_NewsAggregator.DataFlair_NewsAggregator.settings.*" />
+          <option value="testapp.models" />
+          <option value="django.views.decorators.csrf.csrt_exempt" />
+          <option value="untabify" />
+          <option value="langchain.embeddings.openai.OpenAlEmbeddings" />
+          <option value="GptCamparsion.your_embedding_dimension" />
+          <option value="GptCamparsion.MILVUS_PORT" />
+          <option value="GptCamparsion.MILVUS_HOST" />
+          <option value="vStore" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
