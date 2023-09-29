@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     'users'
 ]
 
@@ -153,7 +152,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'shivanshusoni185@gmail.com'
+EMAIL_HOST_USER ='shivanshusoni185@gmail.com'
 EMAIL_HOST_PASSWORD ='dgix vkzf pkkv gxut'
 #dgix vkzf pkkv gxut
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30

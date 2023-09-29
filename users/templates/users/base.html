@@ -13,12 +13,12 @@
 
     <title>{% block title %} {% endblock %} </title>
 </head>
-<body>
+<body style="background-color: #E8E8E8">
   <div class="container p-3 my-3">
     <div class="row">
       <div class="col-md-12">
-        <nav class="navbar navbar-expand-md navbar-light " style="background-color: #f0f5f5">
-          <a href="/" class="navbar-brand">Home</a>
+        <nav class="navbar navbar-expand-md navbar-light " style="background-color: #495464">
+          <a href="/" class="navbar-brand" style="color: #f8fafa">Home</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,7 +28,7 @@
                     <a href="{% url 'users-profile' %}" class="nav-item nav-link">Profile</a>
                     <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
                   {% else %}
-                    <a href="{% url 'login' %}" class="nav-item nav-link">Sign in</a>
+                    <a href="{% url 'login' %}" class="nav-item nav-link" style="color: #f8fafa">Sign in</a>
                   {% endif %}
 
                 </div>
